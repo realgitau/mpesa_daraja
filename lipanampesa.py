@@ -24,6 +24,7 @@ print(r.json())
 print(r.text)
 json_response = r.json()
 my_access_token = json_response['access_token']
+print(my_access_token)
 
 
 def lipa_na_mpesa():
