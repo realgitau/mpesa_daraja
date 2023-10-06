@@ -13,12 +13,11 @@ import accesstoken
 
 unformatted_time = datetime.now()
 formatted_time = unformatted_time.strftime('%Y%m%d%H%M%S')
-print(formatted_time)
-
+# print(formatted_time)
 data_to_encode = keys.business_shortcode + keys.passkey + formatted_time
 encoded_string = base64.b64encode(data_to_encode.encode())
 decoded_password = encoded_string.decode('utf-8')
-print(decoded_password)
+# print(decoded_password)
 
 access_token = accesstoken.my_access_token
 process_request_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
@@ -45,4 +44,9 @@ payload = {
 payload_json = json.dumps(payload)
 
 response = requests.post(process_request_url, headers=headers, data=payload_json)
-print(response.text.encode('utf8'))
+json_response = response.json()
+print(response.text)
+message = json_response['ResponseDescription']
+print(message)
+
+# print(response.text.encode('utf8'))
