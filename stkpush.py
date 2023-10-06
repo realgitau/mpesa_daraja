@@ -47,6 +47,8 @@ response = requests.post(process_request_url, headers=headers, data=payload_json
 json_response = response.json()
 print(response.text)
 message = json_response['ResponseDescription']
+checkout_request_id = json_response['CheckoutRequestID']
 print(message)
+print(checkout_request_id)
 
 # print(response.text.encode('utf8'))
