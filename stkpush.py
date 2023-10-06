@@ -33,9 +33,9 @@ payload = {
     "Timestamp": formatted_time,
     "TransactionType": "CustomerPayBillOnline",
     "Amount": 1,
-    "PartyA": 254745291223,
+    "PartyA": keys.phone_number,
     "PartyB": 174379,
-    "PhoneNumber": 254745291223,
+    "PhoneNumber": keys.phone_number,
     "CallBackURL": "https://mydomain.com/path",
     "AccountReference": "GITAU TEST",
     "TransactionDesc": "Payment of X" 
