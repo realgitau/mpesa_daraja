@@ -12,3 +12,6 @@ headers = { 'Authorization': 'Bearer cFJZcjZ6anEwaThMMXp6d1FETUxwWkIzeVBDa2hNc2M
 
 r = requests.get(api_URL, auth=HTTPBasicAuth(consumer_key, consumer_secret))
 print(r.text)
+json_response = r.json()
+my_access_token = json_response['access_token']
+print(my_access_token)
