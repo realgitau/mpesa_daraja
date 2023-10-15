@@ -57,16 +57,16 @@ response_data = response_data.get("ResponseCode")
 print(response_data)
 
 # Process the response and get the result message
-# result_code = response_data.get("ResultCode")
-# if result_code == "1037":
-#     message = "1037 Timeout in completing transaction"
-# elif result_code == "1032":
-#     message = "1032 Transaction has been canceled by the user"
-# elif result_code == "1":
-#     message = "1 The balance is insufficient for the transaction"
-# elif result_code == "0":
-#     message = "0 The transaction is successful"
-# else:
-#     message = "Unknown result code"
+result_code = response_data
+if result_code == 1037:
+    message = "1037 Timeout in completing transaction"
+elif result_code == 1032:
+    message = "1032 Transaction has been canceled by the user"
+elif result_code == "1":
+    message = "1 The balance is insufficient for the transaction"
+elif result_code == 0:
+    message = "0 The transaction is successful"
+else:
+    message = "Unknown result code"
 
-# print(result_code)
+print(result_code)  
