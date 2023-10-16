@@ -44,7 +44,7 @@ def lipa_na_mpesa():
         "PartyA": keys.PartyA,
         "PartyB": keys.business_shortcode,
         "PhoneNumber": keys.PartyA,
-        "CallBackURL": "https://mydomain.com/path",
+        "CallBackURL": "https://mydomain.com/path/api/payments/lnm/",
         "AccountReference": "CompanyXLTD",
         "TransactionDesc": "Payment of X" 
     }
