@@ -41,14 +41,14 @@ def lipa_na_mpesa():
         "Timestamp": formatted_time,
         "TransactionType": "CustomerPayBillOnline",
         "Amount": 1,
-        "PartyA": keys.PartyA,
+        "PartyA": keys.short_code,
         "PartyB": keys.business_shortcode,
-        "PhoneNumber": keys.PartyA,
-        "CallBackURL": "https://mydomain.com/path/api/payments/lnm/",
+        "PhoneNumber": keys.short_code,
+        "CallBackURL": "https://mydomain.com/path",
         "AccountReference": "CompanyXLTD",
         "TransactionDesc": "Payment of X" 
     }
     response = requests.request("POST", 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest', headers = headers, data = payload)
     print(response.text.encode('utf8'))
 
-#lipa_na_mpesa()
+lipa_na_mpesa()
